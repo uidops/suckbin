@@ -7,8 +7,8 @@
 		if (argv[i][0] != '-' && argv[i-1][0] != '-') { \
 			_rest_args[_n++] = argv[i]; \
 			continue; \
-		} else { \
-			char _arg = argv[i][1]; \
+		} else if (argv[i][0] == '-') { \
+			char *_arg = argv[i+1]; \
 			switch (argv[i][1]) {
 
 #define ARG_END } \
