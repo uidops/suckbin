@@ -6,7 +6,7 @@
 
 #include "arg.h"
 
-void		 usage(void);
+void		 usage(char *__progname);
 
 int
 main(int argc, char **argv)
@@ -19,9 +19,10 @@ main(int argc, char **argv)
 		case 'P':
 			break;
 		default:
-			usage();
+			usage(*argv);
 			break;
 	ARG_END
+	ARG_REST_FREE
 
 	char *cwd;
 	if (flag) {
@@ -43,10 +44,8 @@ main(int argc, char **argv)
 
 
 void
-usage(void)
+usage(char *__progname)
 {
-	puts("PWD\n");
-	puts(" -L: Logical");
-	puts(" -P: Phisical");
+	printf("usage: %s [-LP]\n", __progname);
 	exit(EXIT_FAILURE);
 }
