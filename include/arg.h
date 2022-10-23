@@ -7,7 +7,7 @@
 		if (argv[i][0] != '-' && argv[i-1][0] != '-') { \
 			_rest_args[_n++] = argv[i]; \
 			continue; \
-		} else if (argv[i][0] == '-') { \
+		} else if (argv[i][0] == '-' && argv[i][1] != 0) { \
 			char *_arg = argv[i+1]; \
 			switch (argv[i][1]) {
 
