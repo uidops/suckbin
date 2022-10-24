@@ -10,7 +10,7 @@ main(int argc, char **argv)
 	if (argc > 1)
 		usage(*argv);
 
-	printf("\x1b[2J\x1b[H");
+	fputs("\x1b[2J\x1b[H", stdout);
 	return EXIT_SUCCESS;
 }
 
