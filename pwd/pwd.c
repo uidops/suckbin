@@ -27,6 +27,9 @@ main(int argc, char **argv)
 	char *cwd;
 	if (flag) {
 		cwd = calloc(PATH_MAX, sizeof(char));
+		if (cwd == NULL)
+			err(EXIT_FAILURE, "calloc");
+
 		cwd = getcwd(cwd, PATH_MAX);
 	} else {
 		cwd = getenv("PWD");
