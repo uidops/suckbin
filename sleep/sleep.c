@@ -18,8 +18,7 @@ main(int argc, char **argv)
 			break;
 	ARG_END
 
-	char **args = _rest_args;
-	for (; *args != NULL; args++) {
+	for (char **args = _rest_args; *args != NULL; args++) {
 		unsigned int num = atoi(*(argv+1));
 		while ((num = sleep(num)));
 	}
