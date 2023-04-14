@@ -15,6 +15,7 @@ main(int argc, char **argv)
 	unsigned char mflag = 0, nflag = 0, rflag = 0, sflag = 0, vflag=0;
 	struct utsname uts;
 
+	char *_ar_ = "";
 	ARG_START
 		case 'a':
 			mflag = nflag = rflag = sflag = vflag = 1;

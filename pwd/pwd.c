@@ -12,6 +12,8 @@ int
 main(int argc, char **argv)
 {
 	unsigned char flag = 1;
+
+	char *_ar_ = "";
 	ARG_START
 		case 'L':
 			flag ^= 1;

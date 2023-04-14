@@ -19,6 +19,7 @@ main(int argc, char **argv)
 	char *buff = NULL;
 	struct stat statbuf;
 
+	char *_ar_ = "";
 	ARG_START
 		default:
 			usage(*argv);

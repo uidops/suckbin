@@ -12,6 +12,7 @@ main(int argc, char **argv)
 	if (argc < 2)
 		usage(*argv);
 
+	char *_ar_ = "";
 	ARG_START
 		default:
 			usage(*argv);
