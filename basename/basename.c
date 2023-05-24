@@ -23,7 +23,7 @@ main(int argc, char **argv)
 		usage(*argv);
 
 	n1 = strlen(*_rest_args);
-	bname = fname(*_rest_args, n1);
+	bname = fname(*_rest_args, n1 - 1);
 	if (_n > 1) {
 		n2 = strlen(*(_rest_args + 1));
 		n1 = strlen(bname);
@@ -42,7 +42,7 @@ char *
 fname(const char *path, size_t n)
 {
 	if (n == 0) return NULL;
-	for (; *(path + n) != '/'; n--);
+	for (; *(path + n) != '/' && *(path + n) != 0x00; n--);
 	return (char *) (path + ++n);
 }
 
